@@ -42,17 +42,25 @@ ul > li {
 }
 
 /*** Component Styles ***/
+.Header__wrapper,
+.AppInfo__wrapper,
+.Footer__wrapper {
+  padding: 1rem 1.5rem;
+}
+
 .Header {
-  display: flex;
-  align-items: center;
   position: fixed;
   width: 100%;
   background-color: white;
   box-shadow: 0 0.125rem 0.125rem #0000001c;
 }
+.Header__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
 .Header__title {
   flex-grow: 1;
-  padding: 1rem 0 1rem 1.5rem;
 }
 .Header__title > a {
   text-decoration: none;
@@ -60,7 +68,6 @@ ul > li {
 
 .Nav {
   flex-shrink: 1;
-  padding: 1rem 1.5rem 1rem 0;
   justify-self: flex-end;
 }
 
@@ -90,17 +97,20 @@ ul > li {
 
 .AppInfo {
   flex-grow: 1;
-  padding: 4.5rem 1.5rem 1rem;
+}
+.AppInfo__wrapper {
+  padding-top: 4.5rem;
 }
 
 .Footer {
-  display: flex;
-  flex-direction: column-reverse;
   flex-shrink: 1;
   justify-self: flex-end;
-  padding: 1rem 1.5rem;
   color: #fafafa;
   background-color: #474747;
+}
+.Footer__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
 }
 .Footer__contact {
   flex-grow: 1;
@@ -123,4 +133,33 @@ ul > li {
   flex-grow: 0;
   margin-bottom: 0;
   font-size: 0.75rem;
+}
+
+@media all and (min-width: 30rem) {
+  .Hero__wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .SignUp {
+    max-width: 18rem;
+  }
+}
+
+@media all and (min-width: 50rem) {
+  .AppInfo__wrapper {
+    padding-top: 3rem;
+  }
+  .Header__wrapper,
+  .Hero__wrapper,
+  .AppInfo__wrapper,
+  .Footer__wrapper {
+    max-width: 64rem;
+    align-self: center;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 64rem) {
+  .SignUp {
+    margin-right: 0;
+  }
 }
