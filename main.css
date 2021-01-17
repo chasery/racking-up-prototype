@@ -1,0 +1,126 @@
+/*** General HTML Styles ***/
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul > li {
+  list-style: none;
+}
+
+/*** Component Styles ***/
+.Header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0.125rem 0.125rem #0000001c;
+}
+.Header__title {
+  flex-grow: 1;
+  padding: 1rem 0 1rem 1.5rem;
+}
+.Header__title > a {
+  text-decoration: none;
+}
+
+.Nav {
+  flex-shrink: 1;
+  padding: 1rem 1.5rem 1rem 0;
+  justify-self: flex-end;
+}
+
+.Hero {
+  padding-top: 3.5rem;
+  background-color: #ebebeb;
+}
+
+.SignUp {
+  margin: 1.5rem 1.5rem -3rem 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+}
+
+.SignUp button {
+  margin-top: 2rem;
+}
+
+.FormField {
+  display: flex;
+  flex-direction: column;
+}
+.FormField + .FormField {
+  margin-top: 1rem;
+}
+
+.AppInfo {
+  flex-grow: 1;
+  padding: 4.5rem 1.5rem 1rem;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-shrink: 1;
+  justify-self: flex-end;
+  padding: 1rem 1.5rem;
+  color: #fafafa;
+  background-color: #474747;
+}
+.Footer__contact {
+  flex-grow: 1;
+}
+.Footer__contact > ul {
+  display: flex;
+}
+.Footer__contact > ul > li + li {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 0.0625rem solid #fafafa56;
+}
+.Footer__contact a {
+  color: #fff;
+}
+.Footer__contact a:hover {
+  color: blue;
+}
+.Footer__copyright {
+  flex-grow: 0;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
