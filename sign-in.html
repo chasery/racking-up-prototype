@@ -11,12 +11,34 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
+    <div class="Modal">
+      <div class="Modal__wrapper">
+        <form id="SignIn" class="Form">
+          <h2>Sign In</h2>
+          <p>Enter your Racking Up account credentials below to sign in.</p>
+          <div class="Form__field">
+            <label for="email">Email*</label>
+            <input type="text" id="firstName" />
+          </div>
+          <div class="Form__field">
+            <label for="firstName">Password*</label>
+            <input type="text" id="firstName" />
+          </div>
+          <button>Cancel</button>
+          <button>Sign In</button>
+          <p class="Form__footer">
+            Don't have an account? Sign up for a Racking Up account
+            <a href="/">here</a>.
+          </p>
+        </form>
+      </div>
+    </div>
     <header class="Header" role="banner">
       <div class="Header__wrapper">
         <h1 class="Header__title"><a href="/">Racking Up</a></h1>
         <nav class="Nav" role="navigation">
           <ul>
-            <li><a href="/">Sign In</a></li>
+            <li><a href="sign-in.html">Sign In</a></li>
           </ul>
         </nav>
       </div>
