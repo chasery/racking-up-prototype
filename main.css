@@ -44,6 +44,7 @@ ul > li {
 /*** Component Styles ***/
 .Header__wrapper,
 .AppInfo__wrapper,
+.Racks__wrapper,
 .Footer__wrapper {
   padding: 1rem 1.5rem;
 }
@@ -70,6 +71,12 @@ ul > li {
 .Nav {
   flex-shrink: 1;
   justify-self: flex-end;
+}
+.Nav > ul {
+  display: flex;
+}
+.Nav > ul > li + li {
+  margin-left: 1rem;
 }
 
 .Hero {
@@ -106,6 +113,60 @@ ul > li {
 }
 .AppInfo__wrapper {
   padding-top: 4.5rem;
+}
+
+.Racks {
+  padding-top: 3.5rem;
+}
+
+.RackList {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.RackList > li {
+  align-self: start;
+  list-style: none;
+  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+  background-color: #fff;
+}
+
+.RackHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+}
+.RackHeader__name {
+  flex-grow: 1;
+}
+.RackHeader__cost {
+  padding-left: 0.75rem;
+}
+.RackHeader__arrow {
+  padding-left: 0.75rem;
+}
+
+.RackItems {
+  padding: 0.5rem 1.5rem;
+  border-top: 0.0625rem solid #ebebeb;
+}
+
+.RackItem {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.RackItem__name {
+  flex-grow: 1;
+}
+
+.Rack__create {
+  text-align: center;
+  font-weight: bold;
 }
 
 .Footer {
@@ -166,11 +227,18 @@ ul > li {
   margin-top: 2rem;
 }
 
+@media all and (max-width: 30rem) {
+  .Mobile__hide {
+    display: none;
+  }
+}
+
 @media all and (min-width: 30rem) {
   .Hero__wrapper {
     display: flex;
     justify-content: flex-end;
   }
+
   .Form {
     max-width: 18rem;
   }
@@ -183,14 +251,23 @@ ul > li {
   .Header__wrapper,
   .Hero__wrapper,
   .AppInfo__wrapper,
+  .Racks__wrapper,
   .Footer__wrapper {
     max-width: 64rem;
     align-self: center;
     margin: 0 auto;
   }
+
+  .RackList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media all and (min-width: 64rem) {
   .Hero .Form {
     margin-right: 0;
+  }
+
+  .RackList {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
