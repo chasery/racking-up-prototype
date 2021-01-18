@@ -45,6 +45,7 @@ ul > li {
 .Header__wrapper,
 .AppInfo__wrapper,
 .Racks__wrapper,
+.Clothing_wrapper,
 .Footer__wrapper {
   padding: 1rem 1.5rem;
 }
@@ -79,10 +80,15 @@ ul > li {
   margin-left: 1rem;
 }
 
+.Hero,
+.Racks,
+.Clothing {
+  padding-top: 3.5rem;
+}
+
 .Hero {
   position: relative;
   z-index: 2;
-  padding-top: 3.5rem;
   background-color: #ebebeb;
 }
 
@@ -113,10 +119,6 @@ ul > li {
 }
 .AppInfo__wrapper {
   padding-top: 4.5rem;
-}
-
-.Racks {
-  padding-top: 3.5rem;
 }
 
 .RackList {
@@ -165,6 +167,65 @@ ul > li {
 }
 
 .Rack__create {
+  text-align: center;
+  font-weight: bold;
+}
+
+.ClothingRackHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+}
+.ClothingRackHeader__name {
+  flex-grow: 1;
+}
+.ClothingRackHeader__cost {
+  padding-left: 0.75rem;
+}
+.ClothingRackHeader__arrow {
+  padding-right: 0.75rem;
+}
+.ClothingRackHeader__controls {
+  flex-shrink: 0;
+  padding-left: 0.75rem;
+}
+
+.ClothingList {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.ClothingList > li {
+  align-self: start;
+  list-style: none;
+  box-shadow: 0 0.0625rem 0.0625rem #0000001c;
+  background-color: #fff;
+}
+
+.ClothingItems {
+  padding: 0.5rem 1.5rem;
+  border-top: 0.0625rem solid #ebebeb;
+}
+
+.ClothingItem {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.ClothingItem__name {
+  flex-grow: 1;
+}
+.ClothingItem__controls {
+  flex-shrink: 0;
+  padding-left: 0.75rem;
+}
+
+.Clothing__create {
+  flex-grow: 0;
   text-align: center;
   font-weight: bold;
 }
@@ -242,6 +303,12 @@ ul > li {
   .Form {
     max-width: 18rem;
   }
+
+  .Clothing__create {
+    justify-self: center;
+    min-width: 33%;
+    flex-shrink: 0;
+  }
 }
 
 @media all and (min-width: 50rem) {
@@ -252,6 +319,7 @@ ul > li {
   .Hero__wrapper,
   .AppInfo__wrapper,
   .Racks__wrapper,
+  .Clothing_wrapper,
   .Footer__wrapper {
     max-width: 64rem;
     align-self: center;
